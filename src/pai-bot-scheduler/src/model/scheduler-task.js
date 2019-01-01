@@ -1,21 +1,23 @@
-const {PAIEntity} = require('@pai-tech/pai-code');
+const {PAIEntity} = require("@pai-tech/pai-code");
 
 
 
 class SchedulerTask extends PAIEntity {
     
     
-    constructor() {
-        super();
-        
-        this.intervalPattern = null;
-        this.paiCodeToExecute = null;
-        this.isActive = null;
-    }
+	constructor() {
+		super();
+	
+		this.name = null;
+		this.description = null;
+		this.intervalPattern = null;
+		this.paiCodeToExecute = null;
+		this.isActive = null;
+	}
     
-    setEntityName() {
-        return 'scheduler_task';
-    }
+	setEntityName() {
+		return "scheduler_task";
+	}
 }
 
 
