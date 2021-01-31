@@ -1,6 +1,6 @@
 {
   "name": "@pai-tech/pai-scheduler",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,10 @@
   ],
   "license": "GPL-3.0",
   "dependencies": {
-    "@pai-tech/pai-bot": "^1.0.11",
     "@pai-tech/pai-code": "^1.1.34",
     "node-cron": "^2.0.3"
+  },
+  "devDependencies": {
+    "@pai-tech/pai-bot": "^1.0.11"
   }
 }
