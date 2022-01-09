@@ -101,10 +101,10 @@ class PCM_SCHEDULER extends PAICodeModule {
 	
 		this.loadExistingTasksAfterRestart()
 			.then(success => {
-				PAILogger.info(this.setModuleName() + " - all tasks loaded");
+				PAILogger.info(this.get_module_name() + " - all tasks loaded");
 			})
 			.catch(err => {
-				PAILogger.error(this.setModuleName() + " - failed to load tasks after restart: " + err.message,err);
+				PAILogger.error(this.get_module_name() + " - failed to load tasks after restart: " + err.message,err);
 			});
 	}
     
@@ -126,12 +126,19 @@ class PCM_SCHEDULER extends PAICodeModule {
 		
 		return true;
 	}
-    
+
+	/**
+	 * @deprecated
+	 * @return {string}
+	 */
 	setModuleName() {
+		return this.get_module_name();
+	}
+
+	get_module_name() {
 		return "pai-scheduler";
 	}
-	
-	
+
 	/**
 	 * @param {PAICodeCommand} cmd
 	 * @return {Promise<void>}
